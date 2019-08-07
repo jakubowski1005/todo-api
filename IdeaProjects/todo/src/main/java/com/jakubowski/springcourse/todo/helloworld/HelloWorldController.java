@@ -16,8 +16,8 @@ public class HelloWorldController {
 
     @GetMapping("/hello-world-bean/path-variable/{content}")
     public HelloWorldBean helloWorldBean(@PathVariable String content) {
-        throw new RuntimeException("Something went wrong");
-        //return new HelloWorldBean(content);
+        //throw new RuntimeException("Something went wrong");
+        return new HelloWorldBean(content);
     }
 
     @GetMapping("/hello-world-bean")
