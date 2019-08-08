@@ -1,4 +1,4 @@
-package com.jakubowski.springcourse.todo.helloworld;
+package com.jakubowski.springcourse.helloworld;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

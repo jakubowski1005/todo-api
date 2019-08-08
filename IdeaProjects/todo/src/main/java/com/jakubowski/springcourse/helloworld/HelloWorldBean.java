@@ -1,4 +1,4 @@
-package com.jakubowski.springcourse.todo.helloworld;
+package com.jakubowski.springcourse.helloworld;
 
 public class HelloWorldBean {
 
