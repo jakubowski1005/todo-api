@@ -1,10 +1,14 @@
 package com.jakubowski.springcourse.todo;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Date;
 
+@Entity
 public class Todo {
 
-    private long id;
+    @Id
+    private Long id;
     private String username;
     private String description;
     private Date targetDate;
@@ -22,14 +26,17 @@ public class Todo {
     }
 
     public long getId() {
+
         return id;
     }
 
     public void setId(long id) {
+
         this.id = id;
     }
 
     public String getUsername() {
+
         return username;
     }
 

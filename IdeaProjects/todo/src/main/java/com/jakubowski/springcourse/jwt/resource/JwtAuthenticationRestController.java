@@ -33,7 +33,7 @@ public class JwtAuthenticationRestController {
     @Autowired
     private UserDetailsService jwtInMemoryUserDetailsService;
 
-    @RequestMapping(value = "${jwt.get.token.uri}", method = RequestMethod.POST)
+    @PostMapping("/authenticate")
     public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtTokenRequest authenticationRequest)
             throws AuthenticationException {
 
@@ -46,7 +46,7 @@ public class JwtAuthenticationRestController {
         return ResponseEntity.ok(new JwtTokenResponse(token));
     }
 
-    @RequestMapping(value = "${jwt.refresh.token.uri}", method = RequestMethod.GET)
+    @GetMapping("/refresh")
     public ResponseEntity<?> refreshAndGetAuthenticationToken(HttpServletRequest request) {
         String authToken = request.getHeader(tokenHeader);
         final String token = authToken.substring(7);
