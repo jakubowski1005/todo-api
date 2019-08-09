@@ -1,6 +1,7 @@
 package com.jakubowski.springcourse.todo;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Date;
 
@@ -8,6 +9,7 @@ import java.util.Date;
 public class Todo {
 
     @Id
+    @GeneratedValue
     private Long id;
     private String username;
     private String description;
